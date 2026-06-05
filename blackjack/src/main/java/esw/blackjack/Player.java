@@ -22,10 +22,6 @@ public class Player {
 		return standing;
 	}
 
-	public String getName() {
-		return name;
-	}
-
 	// 3.1 - CONSTRUTOR DEFAULT
 	public Player(String name) {
 		this.name = name;
