@@ -39,10 +39,11 @@ public class Human extends Player {
 	public void winBlackJack() {
 		this.balance += this.currentBet + (this.currentBet * 3 / 2);
 		this.currentBet = 0;
+		this.standing = true;
 	}
 
 	// emapte
-	public void pushBet() {
+	public void tieBet() {
 		this.balance += this.currentBet;
 		this.currentBet = 0;
 	}
