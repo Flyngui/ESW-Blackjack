@@ -1,18 +1,17 @@
 package esw.blackjack;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class BlackjackApp extends Application {
 
 	@Override
-	public void start(Stage stage) {
-		// Placeholder View
-		Label label = new Label("Blackjack Engine Initialized");
-		Scene scene = new Scene(new StackPane(label), 800, 600);
+	public void start(Stage stage) throws Exception {
+		Parent root = FXMLLoader.load(getClass().getResource("/esw/blackjack/fxml/game.fxml"));
+		Scene scene = new Scene(root, 1366, 972);
 
 		stage.setTitle("Blackjack");
 		stage.setScene(scene);
