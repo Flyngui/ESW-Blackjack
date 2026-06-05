@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="esw.blackjack.GameController"
+            stylesheets="@../css/game.css"
+            styleClass="table">
+
+    <!-- DEALER -->
+    <top>
+        <VBox alignment="CENTER" spacing="8.0" styleClass="zone">
+            <padding><Insets top="24.0" right="20.0" bottom="6.0" left="20.0"/></padding>
+            <HBox alignment="CENTER" spacing="12.0">
+                <Label text="DEALER" styleClass="zone-title"/>
+                <Label fx:id="dealerScore" styleClass="score"/>
+            </HBox>
+            <HBox fx:id="dealerCards" alignment="CENTER" spacing="8.0" styleClass="hand"/>
+        </VBox>
+    </top>
+
+    <!-- STATUS -->
+    <center>
+        <Label fx:id="statusLabel" styleClass="status" text="Faça a sua aposta"/>
+    </center>
+
+    <!-- PLAYERS + CONTROLS -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="12.0" styleClass="zone">
+            <padding><Insets top="6.0" right="20.0" bottom="22.0" left="20.0"/></padding>
+
+            <!-- one panel per player, built by the controller -->
+            <HBox fx:id="playersBox" alignment="CENTER" spacing="28.0"/>
+
+            <!-- chip buttons are added by the controller -->
+            <HBox fx:id="chipBox" alignment="CENTER" spacing="12.0"/>
+
+            <HBox alignment="CENTER" spacing="12.0">
+                <Button fx:id="dealBtn" text="Distribuir" onAction="#onDeal" styleClass="action"/>
+                <Button fx:id="hitBtn" text="Pedir" onAction="#onHit" styleClass="action"/>
+                <Button fx:id="standBtn" text="Ficar" onAction="#onStand" styleClass="action"/>
+                <Button fx:id="doubleBtn" text="Dobrar" onAction="#onDouble" styleClass="action"/>
+                <Button fx:id="newBtn" text="Nova ronda" onAction="#onNew" styleClass="action"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,99 @@
+.table {
+    -fx-background-color: linear-gradient(to bottom, #0b6e2e, #064d1c);
+}
+
+.zone-title {
+    -fx-text-fill: #f5f5dc;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.score {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.status {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 4, 0.4, 0, 1);
+}
+
+.info {
+    -fx-text-fill: #f5f5dc;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* keeps the table from jumping when a hand is empty */
+.hand {
+    -fx-min-height: 150px;
+}
+
+/* one box per player; the active player gets a gold outline */
+.player-panel {
+    -fx-padding: 10;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-min-height: 150px;
+}
+
+.player-current {
+    -fx-border-color: #ffd700;
+    -fx-background-color: rgba(255, 215, 0, 0.10);
+}
+
+.player-name {
+    -fx-text-fill: #f5f5dc;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.player-info {
+    -fx-text-fill: #f5f5dc;
+    -fx-font-size: 13px;
+}
+
+.player-result {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.action {
+    -fx-background-color: #d4af37;
+    -fx-text-fill: #222222;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+}
+
+.action:hover {
+    -fx-background-color: #e8c14a;
+}
+
+.action:disabled {
+    -fx-opacity: 0.35;
+}
+
+.chip-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 2;
+    -fx-cursor: hand;
+}
+
+.chip-btn:hover {
+    -fx-effect: dropshadow(gaussian, gold, 12, 0.5, 0, 0);
+}
+
+.chip-btn:disabled {
+    -fx-opacity: 0.35;
+}
